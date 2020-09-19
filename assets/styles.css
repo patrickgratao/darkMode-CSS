@@ -1,0 +1,140 @@
+body {
+  transition: all 0.3 ease-out;
+  max-width: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  background: var(--primary-bg-color);
+
+  --primary-bg-color: #e4e8eb;
+  --movie-image-bg-color: #FF647C;
+  --menu-font-color: #909191;
+  --default-font-color: #606161; 
+}
+
+.darkMode {
+  transition: all 0.3s ease-out;
+  --primary-bg-color: #222;
+  --movie-image-bg-color: #d81f26 ;
+  --menu-font-color: #F3F3F3;
+  --default-font-color: #f7f7f7;
+
+}
+
+/* SWITCH BUTTON */
+.switchDarkMode {
+  position: relative;
+  display: inline-block;
+  width: 47px;
+  height: 20px;
+}
+
+.switchDarkMode input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 5px;
+  bottom: 4.2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #333444;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 20px;
+}
+
+.headerLogo {
+  display: flex;
+  align-items: center;
+}
+
+.headerLogo img {
+  color: blue !important;
+}
+
+.headerNavigation ul{
+  display: flex;
+  list-style: none;
+}
+
+.headerNavigation ul li {
+  margin: 0 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  
+}
+
+.headerNavigation ul li a {
+  color: var(--menu-font-color);
+  text-decoration: none;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.cardsContainer .card {
+  width: 250px;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card .cardImage {
+  width: 100% !important;
+  height: 210px;
+  background-color: var(--movie-image-bg-color);
+}
+
+.card h4 {
+  color: var(--default-font-color);
+}
