@@ -19,7 +19,7 @@
 
 ## :rocket: Technologies
 
-This example was builded using HTML, CSS Varibles and Javascript.
+This example was builded using HTML, CSS Variables, Local Storage and Javascript.
 
 
 ## :information_source: Demo
